@@ -1,0 +1,13 @@
+.container
+	h1.title #{blog.name}
+	p.description #{blog.description}
+	.contacts
+		.box.box--address
+			p город Мариуполь, улица Университетская, 7
+		.box.box--phone
+			ul
+				li: a( href="tel:0957705131" ) +38 095 770 51 31
+		.box.box--email
+			ul
+				li: a( href="mailto:webeditor@pstu.edu" ) webeditor@pstu.edu
+	include _socials

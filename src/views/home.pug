@@ -1,0 +1,23 @@
+include helpers/_variables
+include helpers/_mixing
+doctype html
+html( lang="ru" )
+	include blocks/_head
+	block head
+	block body
+		body( class='home', data-nav="inactive" )
+			include blocks/_mobilenav
+			block wrapper
+				#wrapper.wrapper
+					.wrapper__bg.bg( style="background-image: url( '" + src.img + "/bg.jpg' )" )
+					header.wrapper__item.wrapper__item--header.header#header
+						block header
+							include blocks/_header
+					main.wrapper__item.wrapper__item--main.main#main
+						block main
+							include blocks/_main
+					footer.wrapper__item.wrapper__item--footer.footer
+						block footer
+							include blocks/_footer
+					block enqueue
+						include blocks/_enqueue
