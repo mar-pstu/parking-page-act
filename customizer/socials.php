@@ -8,51 +8,41 @@ if ( ! defined( 'ABSPATH' ) ) { exit; };
 
 
 $wp_customize->add_section(
-    STARTER_SLUG . '_error404',
-    array(
-        'title'            => __( 'Страница ошибки 404', STARTER_TEXTDOMAIN ),
-        'priority'         => 10,
-        'description'      => __( 'Якорь #error404', STARTER_TEXTDOMAIN ),
-        'panel'            => STARTER_SLUG
-    )
+	"{$slug}_socials",
+	array(
+		'title'            => __( 'Социальные сети', PARKING_PAGE_ACT_TEXTDOMAIN ),
+		'priority'         => 10,
+		'description'      => __( 'Список ссылок на страницы социальных сетей организации', PARKING_PAGE_ACT_TEXTDOMAIN ),
+		'panel'            => $slug
+	)
 ); /**/
 
 
 
-$wp_customize->add_setting(
-    STARTER_SLUG . '_error404_title',
-    array(
-        'default'           => __( 'Ошибка 404', STARTER_TEXTDOMAIN ),
-        'transport'         => 'reset',
-        'sanitize_callback' => 'sanitize_text_field',
-    )
-);
-$wp_customize->add_control(
-    STARTER_SLUG . '_error404_title',
-    array(
-        'section'           => STARTER_SLUG . '_error404',
-        'label'             => __( 'Заголовок', STARTER_TEXTDOMAIN ),
-        'type'              => 'text',
-    )
-); /**/
-
-
-
-$wp_customize->add_setting(
-    STARTER_SLUG . '_error404_description',
-    array(
-        'default'           => '',
-        'transport'         => 'reset',
-        'sanitize_callback' => 'sanitize_textarea_field',
-    )
-);
-$wp_customize->add_control(
-    STARTER_SLUG . '_error404_description',
-    array(
-        'section'           => STARTER_SLUG . '_error404',
-        'label'             => __( 'Подзаголовок', STARTER_TEXTDOMAIN ),
-        'type'              => 'textarea',
-    )
-); /**/
-
-
+foreach ( array(
+	'facebook'  => __( 'Facebook', PARKING_PAGE_ACT_TEXTDOMAIN ),
+	'twitter'   => __( 'Twitter', PARKING_PAGE_ACT_TEXTDOMAIN ),
+	'instagram' => __( 'Instagram', PARKING_PAGE_ACT_TEXTDOMAIN ),
+	'youtube'   => __( 'YouTube', PARKING_PAGE_ACT_TEXTDOMAIN ),
+	'linkedin'  => __( 'LinkedIn', PARKING_PAGE_ACT_TEXTDOMAIN ),
+	'ok'        => __( 'Одноклассники', PARKING_PAGE_ACT_TEXTDOMAIN ),
+	'vk'        => __( 'ВКонтакте', PARKING_PAGE_ACT_TEXTDOMAIN ),
+	'github'    => __( 'GitHub', PARKING_PAGE_ACT_TEXTDOMAIN ),
+) as $key => $label ) {
+	$wp_customize->add_setting(
+		"{$slug}_socials[{$key}]",
+		array(
+			'default'           => '',
+			'transport'         => 'reset',
+			'sanitize_callback' => 'sanitize_text_field',
+		)
+	);
+	$wp_customize->add_control(
+		"{$slug}_socials[{$key}]",
+		array(
+			'section'           => "{$slug}_socials",
+			'label'             => $label,
+			'type'              => 'text',
+		)
+	); /**/
+}

@@ -1,0 +1,118 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2020-01-21 13:22+0200\n"
+"PO-Revision-Date: 2020-01-21 13:24+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.4\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e;esc_attr__;esc_attr_e\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: node_modules\n"
+"X-Poedit-SearchPathExcluded-1: src\n"
+
+#: customizer/contacts.php:13
+msgid "Контакты"
+msgstr "Contacts"
+
+#: customizer/contacts.php:15
+msgid "Список контактов организации. Телефоны разделять запятыми!"
+msgstr "Contact list of organization. Phones separated by commas!"
+
+#: customizer/contacts.php:23
+msgid "Телефон"
+msgstr "Telephone"
+
+#: customizer/contacts.php:24
+msgid "Email"
+msgstr "Email"
+
+#: customizer/contacts.php:25
+msgid "Адрес"
+msgstr "Address"
+
+#: customizer/home.php:16
+msgid "Информация"
+msgstr "Information"
+
+#: customizer/home.php:37
+msgid "Заголовок"
+msgstr "Titile"
+
+#: customizer/home.php:56
+msgid "Подзаголовок"
+msgstr "Description"
+
+#: customizer/home.php:75
+msgid "Фон"
+msgstr "Background"
+
+#: customizer/socials.php:13
+msgid "Социальные сети"
+msgstr "Social networks"
+
+#: customizer/socials.php:15
+msgid "Список ссылок на страницы социальных сетей организации"
+msgstr "List of links to organization social networking pages"
+
+#: customizer/socials.php:23 includes/template-functions.php:54
+msgid "Facebook"
+msgstr "Facebook"
+
+#: customizer/socials.php:24 includes/template-functions.php:55
+msgid "Twitter"
+msgstr "Twitter"
+
+#: customizer/socials.php:25 includes/template-functions.php:56
+msgid "Instagram"
+msgstr "Instagram"
+
+#: customizer/socials.php:26 includes/template-functions.php:57
+msgid "YouTube"
+msgstr "YouTube"
+
+#: customizer/socials.php:27 includes/template-functions.php:58
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: customizer/socials.php:28 includes/template-functions.php:59
+msgid "Одноклассники"
+msgstr "OK"
+
+#: customizer/socials.php:29 includes/template-functions.php:60
+msgid "ВКонтакте"
+msgstr "Vkontacte"
+
+#: customizer/socials.php:30 includes/template-functions.php:61
+msgid "GitHub"
+msgstr "GitHub"
+
+#: footer.php:22
+msgid "ЦКТ ПГТУ"
+msgstr "CCT PSTU"
+
+#: functions.php:40
+msgid "Настройки Заглушки"
+msgstr "Parking Page Settings"
+
+#: functions.php:76
+msgid "Главное меню"
+msgstr "Main menu"
+
+#: parts/mobilenav.php:19
+msgid "Закрыть Меню"
+msgstr "Close Menu"
+
+#: parts/mobilenav.php:22
+msgid "Меню"
+msgstr "Menu"
+
+#: parts/nav.php:28
+msgid "Открыть меню"
+msgstr "Open menu"

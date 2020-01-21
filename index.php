@@ -1,28 +1,36 @@
-<?php get_header(); ?>
+<?php
 
-<div class="container">
-  <div class="row">
 
-    <div class="col-xs-12 col-sm-12 <?php echo ( is_active_sidebar( 'column' ) ) ? 'col-md-8 col-lg-8' : 'col-md-12 col-lg-12' ?>">
 
-      <?php
+namespace parking_page_act;
 
-        if ( is_singular() ) {
-          get_template_part( 'parts/singular' );
-        } else {
-          get_template_part( 'parts/archive' );
-        }
 
-      ?>
 
-    </div>
+if ( ! defined( 'ABSPATH' ) ) { exit; };
 
-    <?php if ( is_active_sidebar( 'column' ) ) : ?>
-      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-        <?php get_sidebar(); ?>
-      </div>
-    <?php endif; ?>
 
-  </div>
-</div>
-<?php get_footer(); ?>
+
+get_header();
+
+
+
+$title = get_theme_mod( PARKING_PAGE_ACT_SLUG . '_home_title', get_bloginfo( 'name' ) );
+$description = get_theme_mod( PARKING_PAGE_ACT_SLUG . '_home_description', get_bloginfo( 'description' ) );
+$socials = render_socials_list( get_theme_mod( PARKING_PAGE_ACT_SLUG . '_socials', array() ) );
+$contacts = get_theme_mod( PARKING_PAGE_ACT_SLUG . '_contacts', array() );
+
+if ( function_exists( 'pll__' ) ) {
+	$title = pll__( $title );
+	$description = pll__( $description );
+	foreach ( $contacts as $key => &$value ) {
+		if ( ! empty( trim( $value ) ) ) {
+			$value = pll__( $value );
+		}
+	}
+}
+
+include get_theme_file_path( 'views/home.php' );
+
+
+
+get_footer();
