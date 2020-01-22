@@ -1,0 +1,62 @@
+
+
+
+
+
+
+
+
+
+.nav {
+
+	.list {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		display: none;
+		@include min-width( $screen-lg ) {
+			display: block;
+		}
+	}
+
+	
+	&__list {
+
+		li {
+			display: inline-block;
+		}
+
+		li + li {
+			margin-left: 1em;
+		}
+
+		a {
+			display: block;
+			padding-left: 1em;
+			padding-right: 1em;
+			background-color: $bgc;
+			transition: background-color .2s;
+		}
+
+		a:hover {
+			text-decoration: none;
+			background-color: rgba( 0, 0, 0, .5 );
+		}
+
+	}
+
+
+	.sub-menu {
+		display: none;
+	}
+
+
+	.burger {
+		display: block;
+		@include min-width( $screen-lg ) {
+			display: none;
+		}
+	}
+
+
+}

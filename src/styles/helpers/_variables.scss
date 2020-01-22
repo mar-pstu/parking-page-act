@@ -1,0 +1,29 @@
+//
+//	Переменные
+//
+
+
+$screen-sm:					576px;
+$screen-md:					768px;
+$screen-lg:					992px;
+$screen-xl:					1200px;
+$flexboxgrid-breakpoints:
+  xs $screen-sm 540px,
+  sm $screen-md 720px,
+  md $screen-lg 960px,
+  lg $screen-xl 1140px;
+$flexboxgrid-max-width: 1920px;
+$smallest: xs;
+
+
+
+$font-size-base: 14px;
+$line-height-base:	24em / 14em;
+$line-height-computed: floor( $font-size-base * $line-height-base );
+
+
+
+$font-family-base: 'Roboto', sans-serif;
+
+$brand-primary: rgba( 0, 0, 0, .5 );
+$bgc: rgba( 0, 0, 0, .35 );

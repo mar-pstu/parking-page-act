@@ -1,0 +1,67 @@
+//
+//
+//  Шапка сайта
+//
+//
+
+
+.header {
+
+	padding: .5em 0;
+	color: #fff;
+	min-height: $line-height-computed + $font-size-base;
+
+	a {
+		color: #fff;
+		text-shadow: .1em .1em .5em #000;
+	}
+
+	.container {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-start;
+	}
+
+	.custom-logo-link {
+		text-decoration: none;
+	}
+
+	.custom-logo {
+		display: block;
+		width: auto;
+		height: 3em;
+	}
+
+	.custom-logo-link:hover {
+		text-decoration: none;
+	}
+
+
+	.nav {
+		margin-left: auto;
+	}
+
+	.nav ~ .languages {
+		margin-left: 1em;
+	}
+
+	.languages {
+		margin: 0 0 0 auto;
+		list-style-type: none;
+	}
+
+	.languages li {
+		font-size: 85%;
+		display: inline-block;
+	}
+
+	.languages li + li {
+		margin-left: 1em;
+	}
+
+	.languages .current {
+		font-weight: bold;
+	}
+
+}

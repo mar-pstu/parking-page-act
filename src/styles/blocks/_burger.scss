@@ -1,0 +1,46 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.burger {
+
+	background-color: transparent;
+	border: none;
+
+    .label {
+    	display: inline-block;
+    	margin-left: .5em;
+    	margin-right: .5em;
+    	vertical-align: middle;
+    }
+
+    .icon {
+		display: inline-block;
+		vertical-align: middle;
+		width: 2em;
+		transition: transform .2s;
+    }
+
+    .icon span {
+    	display: block;
+    	height: 2px;
+    	background-color: #fff;
+    	box-shadow: .1em .1em .5em #000;
+    	margin: .5em 0;
+    }
+
+    &.active .icon {
+    	transform: rotate( 90deg );
+    }
+
+}
